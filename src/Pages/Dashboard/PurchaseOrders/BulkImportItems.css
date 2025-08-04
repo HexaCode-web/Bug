@@ -1,0 +1,287 @@
+/* BulkImportItems.css */
+.BulkImport {
+  padding: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+  direction: rtl;
+}
+
+.BulkImport-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.BulkImport-title {
+  color: var(--text-primary);
+  font-size: var(--font-size-xxxl);
+  margin: 0;
+}
+
+.BulkImport-backButton {
+  background-color: var(--status-error);
+  color: var(--text-inverse);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  transition: background-color var(--animation-duration-normal)
+    var(--animation-ease);
+}
+
+.BulkImport-backButton:hover {
+  background-color: var(--primary-dark);
+}
+
+.BulkImport-instructions {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xxl);
+}
+
+.BulkImport-instructions h3 {
+  color: var(--secondary-dark);
+  margin-bottom: var(--spacing-lg);
+}
+
+.BulkImport-instructions ul {
+  color: var(--text-secondary);
+  line-height: var(--line-height-loose);
+  padding-right: var(--spacing-md);
+}
+
+.BulkImport-downloadButton {
+  background-color: var(--status-success);
+  color: var(--text-inverse);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  margin-top: var(--spacing-lg);
+  transition: background-color var(--animation-duration-normal)
+    var(--animation-ease);
+}
+
+.BulkImport-downloadButton:hover {
+  background-color: var(--status-success);
+  opacity: 0.9;
+}
+
+.BulkImport-uploadArea {
+  background-color: var(--surface-color);
+  border: 2px dashed var(--border-medium);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xxl);
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.BulkImport-fileIcon {
+  font-size: 3rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+}
+
+.BulkImport-uploadButton {
+  background-color: var(--primary-color);
+  color: var(--text-inverse);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-xxl);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  margin-bottom: var(--spacing-lg);
+  transition: background-color var(--animation-duration-normal)
+    var(--animation-ease);
+}
+
+.BulkImport-uploadButton:hover {
+  background-color: var(--primary-dark);
+}
+
+.BulkImport-uploadButton:disabled {
+  background-color: var(--text-disabled);
+  cursor: not-allowed;
+}
+
+.BulkImport-fileInfo {
+  color: var(--text-primary);
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-md);
+  background-color: var(--surface-elevated);
+  border-radius: var(--border-radius-md);
+}
+
+.BulkImport-validationErrors {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xxl);
+}
+
+.BulkImport-validationErrors h4 {
+  color: #721c24;
+  margin-bottom: var(--spacing-lg);
+}
+
+.BulkImport-errorList {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.BulkImport-errorItem {
+  color: #721c24;
+  margin-bottom: var(--spacing-xs);
+}
+
+.BulkImport-preview {
+  margin-bottom: var(--spacing-xxl);
+}
+
+.BulkImport-preview h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xl);
+}
+
+.BulkImport-tableContainer {
+  overflow-x: auto;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--border-radius-md);
+}
+
+.BulkImport-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--surface-color);
+}
+
+.BulkImport-table th {
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-medium);
+  text-align: right;
+  background-color: var(--light-gray);
+}
+
+.BulkImport-table td {
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-medium);
+}
+
+.BulkImport-previewNote {
+  color: var(--text-secondary);
+  margin-top: var(--spacing-sm);
+  text-align: center;
+}
+
+.BulkImport-results {
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xxl);
+}
+
+.BulkImport-results.success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.BulkImport-results.warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+}
+
+.BulkImport-results h4 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.BulkImport-results.success h4 {
+  color: #155724;
+}
+
+.BulkImport-results.warning h4 {
+  color: #856404;
+}
+
+.BulkImport-errorDetails {
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: var(--spacing-sm);
+}
+
+.BulkImport-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+}
+
+.BulkImport-actionButton {
+  color: var(--text-inverse);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-xxl);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  transition: background-color var(--animation-duration-normal)
+    var(--animation-ease);
+}
+
+.BulkImport-importButton {
+  background-color: var(--status-success);
+}
+
+.BulkImport-importButton:disabled {
+  background-color: var(--text-disabled);
+  cursor: not-allowed;
+}
+
+.BulkImport-resetButton {
+  background-color: var(--text-disabled);
+}
+
+.BulkImport-resetButton:disabled {
+  cursor: not-allowed;
+}
+
+.BulkImport-loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.BulkImport-loadingContent {
+  background-color: var(--surface-color);
+  padding: var(--spacing-xxl);
+  border-radius: var(--border-radius-md);
+  text-align: center;
+}
+
+.BulkImport-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--light-gray);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto var(--spacing-xl);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,413 @@
+/* LoginPage.module.css */
+.container {
+  display: flex;
+  min-height: 100vh;
+  max-width: 100% !important;
+  background-color: var(--background-color);
+}
+
+.logo {
+  width: 300px;
+  border-radius: var(--border-radius-md);
+}
+.brandingContent {
+  z-index: 1;
+  max-width: 500px;
+}
+
+.brandingTitle {
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+}
+
+.brandingText {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-xl);
+  line-height: var(--line-height-lg);
+}
+
+.formPanel {
+  flex: 1 1 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-xl);
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 400px;
+}
+
+.logoContainer {
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.form {
+  width: 100%;
+}
+
+.inputGroup {
+  margin-bottom: var(--spacing-md);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+  font-weight: var(--font-weight-medium);
+  text-align: left;
+}
+
+.input {
+  height: 48px;
+  width: 100%;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--border-radius-md);
+  padding: 0 var(--spacing-md);
+  font-size: var(--font-size-md);
+  color: var(--text-primary);
+  background-color: var(--color-white);
+  transition: all var(--animation-duration-fast)
+    var(--animation-easing-easeInOut);
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(27, 83, 140, 0.3);
+}
+
+.errorLabel {
+  color: var(--status-error);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
+  min-height: 20px;
+}
+
+.button {
+  width: 100%;
+  height: 48px;
+  margin-top: var(--spacing-md);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-md);
+  border: none;
+  cursor: pointer;
+  transition: all var(--animation-duration-normal)
+    var(--animation-easing-easeInOut);
+  box-shadow: var(--shadow-sm);
+}
+
+.button:hover {
+  background-color: var(--primary-light);
+  box-shadow: var(--shadow-md);
+}
+
+.button:active {
+  background-color: var(--primary-dark);
+}
+
+.button:disabled {
+  background-color: var(--text-disabled);
+  cursor: not-allowed;
+}
+
+.buttonText {
+  visibility: visible;
+}
+
+.buttonText.loading {
+  visibility: hidden;
+}
+
+.spinner {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--text-inverse);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+.spinner.loading {
+  display: block;
+}
+
+.forgotPassword {
+  display: block;
+  margin-top: var(--spacing-md);
+  text-align: center;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: color var(--animation-duration-fast)
+    var(--animation-easing-easeInOut);
+}
+
+.forgotPassword:hover {
+  color: var(--primary-dark);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: var(--spacing-lg) 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-light);
+}
+
+.dividerText {
+  padding: 0 var(--spacing-sm);
+}
+
+.signupPrompt {
+  margin-top: var(--spacing-lg);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.signupLink {
+  color: var(--primary-color);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: color var(--animation-duration-fast)
+    var(--animation-easing-easeInOut);
+}
+
+.signupLink:hover {
+  color: var(--primary-dark);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .leftPanel {
+    display: none;
+  }
+
+  .formPanel {
+    flex: 1;
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}
+
+.forgotPasswordContainer {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.forgotPasswordLink {
+  background: none;
+  border: none;
+  color: #4285f4;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+}
+
+.forgotPasswordLink:hover {
+  text-decoration: underline;
+  color: #0d47a1;
+}
+
+/* Modal Overlay */
+.resetModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Container */
+.resetModalContainer {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal Header */
+.resetModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.resetModalHeader h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.resetModalCloseButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  line-height: 1;
+}
+
+.resetModalCloseButton:hover {
+  color: #333;
+}
+
+/* Modal Body */
+.resetModalBody {
+  margin-bottom: 10px;
+}
+
+/* Reset Message */
+.resetMessage {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.resetMessage.success {
+  background-color: #e6f7e6;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.resetMessage.error {
+  background-color: #fdecea;
+  color: #d32f2f;
+  border: 1px solid #ffcdd2;
+}
+
+/* Modal Footer */
+.resetModalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Cancel Button */
+.cancelButton {
+  padding: 10px 16px;
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.cancelButton:hover {
+  background-color: #e0e0e0;
+}
+
+/* Reset Button */
+.resetButton {
+  padding: 10px 16px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.2s;
+  min-width: 130px;
+}
+
+.resetButton:hover {
+  background-color: #2a75f3;
+}
+
+.resetButton:disabled {
+  background-color: #a6c8ff;
+  cursor: not-allowed;
+}
+
+/* Loading state for reset button */
+.resetButton.loading .buttonText.loading {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.resetButton.loading .spinner.loading {
+  visibility: visible;
+  opacity: 1;
+}
