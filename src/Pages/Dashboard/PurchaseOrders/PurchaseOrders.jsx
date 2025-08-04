@@ -844,15 +844,9 @@ const PurchaseOrders = ({ canEdit }) => {
       name: "الإجراءات",
       cell: (row) => (
         <div className="order-actions">
-          <div className="buttonIcon" onClick={() => viewOrder(row)}>
-            <IoEyeSharp size={20} />
-          </div>
+          <div className="buttonIcon" onClick={() => viewOrder(row)}></div>
           {canEdit && (
             <>
-              {" "}
-              <div className="buttonIcon" onClick={() => editOrder(row)}>
-                <MdEdit size={20} />
-              </div>
               <div className="buttonIcon" onClick={() => deleteOrder(row)}>
                 <MdDeleteOutline size={20} />
               </div>

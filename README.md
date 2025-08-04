@@ -1,12 +1,17 @@
-# React + Vite
+# issue description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a part of the code of a system we are working on.
+the expected flow as below
 
-Currently, two official plugins are available:
+- the user thinks about bulk importing some purchase order
+- the user clicks on the "استيراد"
+- the user downloads a template
+- the user uploads the template with the data
+- the system write to firebase each purchase order
+- the system gives a result in the bottom
+- the imported purchase orders should be the same amount that are in the sheet
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What goes wrong
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- if the user imports for example 100 purchase order, the system only write down 99
+- even though it provides info to the user that they imported all 100, but when user goes back to display the data he sees only 99
